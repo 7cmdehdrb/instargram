@@ -499,7 +499,7 @@ export const adj = [
     "gamy",
     "different",
     "frequent",
-]
+];
 
 export const noun = [
     "dad",
@@ -1002,4 +1002,4 @@ export const noun = [
     "ticket",
     "pail",
     "chin",
-]
+];
