@@ -3,11 +3,12 @@ import { generateSecret, sendMail } from "../../../utils";
 
 export default {
     Mutation: {
-        requestSecret: async (_, args) => {
+        requestSecret: async (_, args, { request }) => {
             const { email } = args;
             const secret = generateSecret();
             console.log(`User Secret: ${secret}`);
             try {
+                throw Error();
                 await prisma.updateUser({
                     data: { loginSecret: secret },
                     where: { email },

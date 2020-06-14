@@ -11,14 +11,12 @@ const verifyUser = async (payload, done) => {
     try {
         const user = await prisma.user({ id: payload.id });
         if (user !== null) {
-            console.log("not null");
             return done(null, user);
         } else {
-            console.log("null");
             return done(null, false);
         }
     } catch (err) {
-        console.log("err");
+        console.log("err on verify user");
         return done(err, false);
     }
 };
